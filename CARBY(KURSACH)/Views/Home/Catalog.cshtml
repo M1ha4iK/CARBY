@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Каталог";
+}
+
+<main class="page-catalog">
+    <div class="page_content-catalog">
+        <div class="brands-catalog">
+            <div class="brands-title">Популярные марки автомобилей:</div>
+            <div class="brands-menu">
+                <div class="brands-list">
+                    <ul class="brands-row">
+                        <li><a href="/Home/Audi" class="brands-list_link"><span>Audi</span> <small>12</small></a></li>
+                        <li><a href="/Home/BMW" class="brands-list_link"><span>BMW</span> <small>8</small></a></li>
+                        <li><a href="/Home/Chevrolet" class="brands-list_link"><span>Chevrolet</span> <small>5</small></a></li>
+                        <li><a href="/Home/Dacia" class="brands-list_link"><span>Dacia</span> <small>3</small></a></li>
+                    </ul>
+                    <ul class="brands-row">
+                        <li><a href="/Home/Ford" class="brands-list_link"><span>Ford</span> <small>5</small></a></li>
+                        <li><a href="/Home/Geely" class="brands-list_link"><span>Geely</span> <small>0</small></a></li>
+                        <li><a href="/Home/Honda" class="brands-list_link"><span>Honda</span> <small>0</small></a></li>
+                        <li><a href="/Home/Infiniti" class="brands-list_link"><span>Infiniti</span> <small>0</small></a></li>
+                    </ul>
+                    <ul class="brands-row">
+                        <li><a href="/Home/Jaguar" class="brands-list_link"><span>Jaguar</span> <small>0</small></a></li>
+                        <li><a href="/Home/Kia" class="brands-list_link"><span>Kia</span> <small>0</small></a></li>
+                        <li><a href="/Home/Lada" class="brands-list_link"><span>Lada</span> <small>0</small></a></li>
+                        <li><a href="/Home/Mazda" class="brands-list_link"><span>Mazda</span> <small>0</small></a></li>
+                    </ul>
+                    <ul class="brands-row">
+                        <li><a href="/Home/Nissan" class="brands-list_link"><span>Nissan</span> <small>0</small></a></li>
+                        <li><a href="/Home/Porsche" class="brands-list_link"><span>Porsche</span> <small>0</small></a></li>
+                        <li><a href="/Home/Audi" class="brands-list_link"><span>Tesla</span> <small>0</small></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="interesting-offers_content">
+        <div class="interesting-offers_header">
+            <span>Новые автомобили от официальных дилеров</span>
+        </div>
+        <div class="interesting-offers-main">
+            <ul class="interesting-list">
+                <li class="interesting-item">
+                    <div class="interesting-image"><img src="/Content/catalog/bmwX3.png" alt="" width="70%" height="70%"></div>
+                    <div class="interesting-title">BMW X3</div>
+                    <div class="interesting-param">2021, 2.0л, АТ</div>
+                    <div class="interesting-links"><a href="/Home/BMW" class="interesting-link">Полный список ⟶</a></div>
+                </li>
+                <li class="interesting-item">
+                    <div class="interesting-image"><img src="/Content/catalog/kiaX2021.png" alt="" width="70%" height="70%"></div>
+                    <div class="interesting-title">Kia X-line</div>
+                    <div class="interesting-param">2021, 1.6л, АТ</div>
+                    <div class="interesting-links"><a href="/Home/Kia" class="interesting-link">Полный список ⟶</a></div>
+                </li>
+                <li class="interesting-item">
+                    <div class="interesting-image"><img src="/Content/catalog/audiA5.png" alt="" width="70%" height="70%"></div>
+                    <div class="interesting-title">Audi A5</div>
+                    <div class="interesting-param">2021, 2.0л, DSG</div>
+                    <div class="interesting-links"><a href="/Home/Audi" class="interesting-link">Полный список ⟶</a></div>
+                </li>
+                <li class="interesting-item">
+                    <div class="interesting-image"><img src="/Content/catalog/teslaY2021.png" alt="" width="70%" height="70%"></div>
+                    <div class="interesting-title">Tesla Y</div>
+                    <div class="interesting-param">2021, Электрический, АТ</div>
+                    <div class="interesting-links"><a href="/Home/Tesla" class="interesting-link">Полный список ⟶</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="interesting-offers-footer">
+            <a href="/Home/Promotions" class="interesting-offers-link"><span>Смотреть все акции</span></a>
+        </div>
+    </div>
+    <div class="page_info-menu">
+        <div class="info-menu_body">
+            <div class="info-menu_line">
+                <div class="info-menu_label">Информация:</div>
+                <ul class="info-menu_list">
+                    <li><a href="/Home/Promotions" class="info-menu_link">Акции</a></li>
+                    <li><a href="/Home/Reviews" class="info-menu_link">Отзывы</a></li>
+                    <li><a href="/Documents.docx" class="info-menu_link">Документы</a></li>
+                    <li><a href="/Home/AboutCompany" class="info-menu_link">О компании</a></li>
+                </ul>
+            </div>
+            <div class="info-menu_line">
+                <div id="helpOplata">
+                    <div id="okno">
+                        Оплата производится только на прямую в салоне,<br>
+                        после составления всех договоров, документов<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpGarantia">
+                    <div id="okno">
+                        Гарантия дается на все автомобили, в зависимости от<br>
+                        установленого, производителем, срока.<br>
+                        В случае поломки, установленной в договоре,<br>
+                        автомобиль необходимо своеврменно отдать<br>
+                        на ремонт в салон.<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpVozvrat">
+                    <div id="okno">
+                        Возврат осуществляется только в случае поломки<br>
+                        автомобиля, прописаной в договоре.<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpBron">
+                    <div id="okno">
+                        Перейдите в каталог, выберите подходящий автомобиль,<br>
+                        в таблице выберите подходящую модель, и нажмите<br>
+                        на кнопку "Забронировать"<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div class="info-menu_label">Помощь:</div>
+                <ul class="info-menu_list">
+                    <li><a href="#helpBron" class="info-menu_link">Как забронировать</a></li>
+                    <li><a href="#helpOplata" class="info-menu_link">Оплата</a></li>
+                    <li><a href="#helpGarantia" class="info-menu_link">Гарантия</a></li>
+                    <li><a href="#helpVozvrat" class="info-menu_link">Возврат</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</main>

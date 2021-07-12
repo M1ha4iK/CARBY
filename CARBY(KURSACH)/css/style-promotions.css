@@ -1,0 +1,71 @@
+.page-promotions {
+
+}
+.page_content-promotions {
+
+}
+.content-header_promotions {
+    margin: 30px 0px 50px 0px;
+}
+.header-title_promotions {
+    text-align: center;
+    font-size: 35px;
+    font-family: "font1";
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+}
+.title-line_promotions {
+    margin: auto;
+    border-bottom: 5px solid #f0c60b;
+    width: 275px;
+    padding: 15px 0px 0px 0px;
+}
+.content-main_promotions {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.main-items_promotions {
+    display: block;
+}
+.main-item_promotions {
+    margin-bottom: 30px;
+    display: flex;
+}
+.image-item_promotions {
+    border: 1px solid #f9a34b;
+    box-shadow: 0 0 0 2px #f9a34b, 0 0 20px rgb(255, 0, 0);
+    padding: 15px 0px 10px 0px;
+    text-align: center;
+    width: 208px;
+    height: 210px;
+    background-color: rgb(80, 80, 80);
+}
+.image_promotions {
+
+}
+.image-text_promotions {
+    padding-top: 9px;
+    font-size: 16px;
+    font-family: "font1";
+    color: white;
+}
+.item-textcontent_promotions {
+    margin: 0px 0px 0px 20px;
+}
+.title-item_promotions {
+    font-size: 22px;
+    font-family: "font1";
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.car-item_promotions {
+    font-size: 19px;
+    font-family: "font1";
+    font-weight: bold;
+    color: grey;
+    padding-bottom: 15px;
+}
+.text-item_promotions {
+    font-size: 17px;
+    font-family: "font1";
+}

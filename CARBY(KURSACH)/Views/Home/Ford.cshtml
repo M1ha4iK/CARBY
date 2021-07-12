@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "Ford";
+}
+<main class="page">
+    <div class="page_container">
+        <aside class="page_side">
+            <nav class="menu_page">
+                <div class="menu-page_header">
+                    <div class="menu-page_title">Каталог <span>автомобилей</span></div>
+                    <div class="menu-page_burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="menu-page_body">
+                    <ul class="menu-page_list">
+                        <li><a href="/Home/Audi" class="menu-page_link">Audi</a></li>
+                        <li><a href="/Home/BMW" class="menu-page_link">BMW</a></li>
+                        <li><a href="/Home/Chevrolet" class="menu-page_link">Chevrolet</a></li>
+                        <li><a href="/Home/Dacia" class="menu-page_link">Dacia</a></li>
+                        <li><a href="/Home/Ford" class="menu-page_link">Ford</a></li>
+                        <li><a href="/Home/Honda" class="menu-page_link">Honda</a></li>
+                        <li><a href="/Home/Infiniti" class="menu-page_link">Infiniti</a></li>
+                        <li><a href="/Home/Jaguar" class="menu-page_link">Jaguar</a></li>
+                        <li><a href="/Home/Kia" class="menu-page_link">Kia</a></li>
+                        <li><a href="/Home/Lada" class="menu-page_link">Lada</a></li>
+                        <li><a href="/Home/Mazda" class="menu-page_link">Mazda</a></li>
+                        <li><a href="/Home/Nissan" class="menu-page_link">Nissan</a></li>
+                        <li><a href="/Home/Porsche" class="menu-page_link">Porsche</a></li>
+                        <li><a href="/Home/Tesla" class="menu-page_link">Tesla</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <div class="page_content">
+            <form action="#" class="page_search">
+                <div class="search-page_input">
+                    <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input" placeholder="Поиск в Каталоге">
+                </div>
+                <button type="submit" class="search-page_btn">Найти</button>
+            </form>
+            <div class="page_cars">
+                <div class="page-cars_title">Ford</div>
+                <div class="scroll-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Марка автомобиля</th>
+                                <th>Год выпуска</th>
+                                <th>Цена</th>
+                                <th>Номер модели</th>
+                                <th>Забронировать</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="scroll-table-body">
+                        <table>
+                            <tbody>
+                                @{
+                                    foreach (CARBY_KURSACH_.Models.Ford ford in Model)
+                                    {
+                                        <tr>
+                                            <td>@ford.NameCar</td>
+                                            <td>@ford.MadeData</td>
+                                            <td>@ford.Price</td>
+                                            <td>@ford.Id_Model</td>
+                                            <td><a href="/Home/Buy/@ford.Id">Забронировать</a></td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_info-menu">
+        <div class="info-menu_body">
+            <div class="info-menu_line">
+                <div class="info-menu_label">Информация:</div>
+                <ul class="info-menu_list">
+                    <li><a href="/Home/Promotions" class="info-menu_link">Акции</a></li>
+                    <li><a href="/Home/Reviews" class="info-menu_link">Отзывы</a></li>
+                    <li><a href="/Documents.docx" class="info-menu_link">Документы</a></li>
+                    <li><a href="/Home/AboutCompany" class="info-menu_link">О компании</a></li>
+                </ul>
+            </div>
+            <div class="info-menu_line">
+                <div id="helpOplata">
+                    <div id="okno">
+                        Оплата производится только на прямую в салоне,<br>
+                        после составления всех договоров, документов<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpGarantia">
+                    <div id="okno">
+                        Гарантия дается на все автомобили, в зависимости от<br>
+                        установленого, производителем, срока.<br>
+                        В случае поломки, установленной в договоре,<br>
+                        автомобиль необходимо своеврменно отдать<br>
+                        на ремонт в салон.<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpVozvrat">
+                    <div id="okno">
+                        Возврат осуществляется только в случае поломки<br>
+                        автомобиля, прописаной в договоре.<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div id="helpBron">
+                    <div id="okno">
+                        Перейдите в каталог, выберите подходящий автомобиль,<br>
+                        в таблице выберите подходящую модель, и нажмите<br>
+                        на кнопку "Забронировать"<br>
+                        <a href="#" class="close">Понятно</a>
+                    </div>
+                </div>
+                <div class="info-menu_label">Помощь:</div>
+                <ul class="info-menu_list">
+                    <li><a href="#helpBron" class="info-menu_link">Как забронировать</a></li>
+                    <li><a href="#helpOplata" class="info-menu_link">Оплата</a></li>
+                    <li><a href="#helpGarantia" class="info-menu_link">Гарантия</a></li>
+                    <li><a href="#helpVozvrat" class="info-menu_link">Возврат</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="bottom-header_actions">
+            <li>
+                @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li>
+                <a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="bottom-header_actions">
+        <li>
+            <a href="/Account/Login" class="actions-header_login"><span>Вход</span></a>
+        </li>
+        <li>
+            <a href="/Account/Register" class="actions-header_reg"><span>Регистрация</span></a>
+        </li>
+        <li>
+            <a href="mailto:smagin12336@gmail.com" class="actions-header_mail"><span>smagin12336@gmail.com</span></a>
+        </li>
+    </ul>
+}

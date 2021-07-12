@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/header-footer-style1.css">
+    <link rel="stylesheet" href="~/css/main-style1.css">
+    <link rel="stylesheet" href="~/css/style-catalog.css">
+    <link rel="stylesheet" href="~/css/style-reviews.css">
+    <link rel="stylesheet" href="~/css/style-promotions.css">
+    <link rel="stylesheet" href="~/css/style-about_company.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="~/js/script.js"></script>
+    <style>
+        .page_cars {
+            margin-top: 30px;
+        }
+
+        .page-cars_title {
+            font-family: roboto;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 0px 0px 20px 445px;
+        }
+
+        .scroll-table-body {
+            height: 400px;
+            overflow-x: auto;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .scroll-table table {
+            width: 938px;
+            table-layout: fixed;
+            border: none;
+        }
+
+        .scroll-table thead th {
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            padding: 10px;
+            background: #f9a34b;
+            font-size: 14px;
+        }
+
+        .scroll-table tbody td {
+            text-align: left;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 10px 15px;
+            font-size: 14px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .scroll-table tbody tr:nth-child(even) {
+            background: #f3f3f3;
+        }
+
+        /* Стили для скролла */
+
+    </style>
+    <title>CARBY</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_top">
+            <div class="header_content">
+                <div class="top-header_column">
+                    <div class="top-header_menu">
+                        <div class="menu_icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav class="menu_body">
+                            <ul class="menu_list">
+                                <li><a href="/Home/Index" class="menu_link">Главная</a></li>
+                                <li><a href="/Home/Promotions" class="menu_link">Акции</a></li>
+                                <li><a href="/Home/Reviews" class="menu_link">Отзывы</a></li>
+                                <li><a href="/Home/Catalog" class="menu_link">Каталог</a></li>
+                                <li><a href="/Documents.docx" class="menu_link">Документы</a></li>
+                                <li><a href="/Home/AboutCompany" class="menu_link">О компании</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="top-header_column">
+                    <div class="header_logo">
+                        CARBY
+                        <div class="header_logo_bottom">Продажа авто</div>
+                    </div>
+
+                </div>
+                <div class="top-header_column">
+                    <div class="top_header_contacts">
+                        <div class="contacts-header_column">
+                            <div class="contacts-header_item">
+                                <div class="contacts-header_label">Брест</div>
+                                <a href="tel:80295228541" class="contacts-header_phone">+375(29)522-85-41</a>
+                            </div>
+                        </div>
+                        <div class="contacts-header_column">
+                            <div class="contacts-header_label">Бесплатно по Беларуси</div>
+                            <a href="tel:80259119567" class="contacts-header_phone">+375(25)911-95-67</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="bottom-header_container">
+                <div class="bottom-header_column">
+                    @Html.Partial("_LoginPartial")
+                </div>
+                <div class="bottom-header_column">
+                    <ul class="bottom-header_info">
+                        <li>
+                            <a href="tel:80295228541" class="info-header_callback"><span>Обратный звонок</span></a>
+                        </li>
+                        <li>
+                            <div class="info-header_schedule">
+                                <p><span>Пн-Пт:</span> 09:00-21:00 </p>
+                                <p><span>Сб-Вс:</span> 11:00-19:00 </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer_body">
+                <div class="footer-column">
+                    <div class="footer_block">
+                        <div class="block-footer_column">
+                            <a href="" class="logo-footer">
+                                <img src="~/Content/footer/logo2d-3dpng.png" alt="">
+                            </a>
+                            <div class="block-footer_phones">
+                                <a href="tel:80295228541" class="block-footer_phone">+375(29)522-85-41</a>
+                                <a href="tel:80259119567" class="block-footer_phone">+375(25)911-95-67</a>
+                            </div>
+                        </div>
+                        <div class="block-footer_column">
+                            <div class="block-footer_communicate">
+                                <div class="communicate-footer_title">Сотрудничаем с компаниями:</div>
+                                <div class="communicate-footer_rows">
+                                    <div class="communicate-footer_items">
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/BMW.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/ford.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/GM.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/tayota.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/tesla.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="communicate-footer_items">
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/audi.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/mazda.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/chevrolet.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/honda.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/kia.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="communicate-footer_items">
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/nissan.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/porsche.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/ferrari.png" alt="">
+                                        </div>
+                                        <div class="communicate-footer_item">
+                                            <img src="~/Content/footer/communicate/infiniti.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column1">
+                    <div class="footer_block-feedback">
+                        <div class="footer_column-feedback">
+                            <p class="footer_feedback-title">Оставьте заявку</p>
+                            <p class="footer_feedback-text">И мы свяжемся с вами!</p>
+                            <div class="footer_form-input">
+                                <img src="~/Content/header/icons/reg2.png" alt="" class="form-input_img">
+                                <input type="text" name="Person" placeholder="ФИО">
+                            </div>
+                            <div class="footer_form-input">
+                                <img src="~/Content/header/icons/callback.png" alt="" class="form-input_img">
+                                <input type="text" name="Number" placeholder="Номер телефона">
+                            </div>
+                            <div class="footer_form-btn">
+                                <button type="submit" class="send">Отправить</button>
+                            </div>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer_bottom">
+                <div class="footer_copy">©2021 Все права защищены.</div>
+                <div class="footer_social">
+                    <div class="footer_social_item">
+                        <a href="https://vk.com/wh0ifnotme"><img src="~/Content/footer/social/vk.png" alt="" height="33" width="33"></a>
+                    </div>
+                    <div class="footer_social_item">
+                        <a href="https://www.instagram.com/?hl=ru"><img src="~/Content/footer/social/instagram.png" alt="" height="33" width="33"></a>
+                    </div>
+                    <div class="footer_social_item">
+                        <a href="https://www.youtube.com/"><img src="~/Content/footer/social/facebook.png" alt="" height="33" width="33"></a>
+                    </div>
+                    <div class="footer_social_item">
+                        <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="~/Content/footer/social/youtube.png" alt="" height="33" width="33"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

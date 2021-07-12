@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/bron-style.css">
+    <title>Забронировать автомобиль</title>
+</head>
+<body>
+    <div>
+        <form method="post" class="decor">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="circle"></div>
+            <div class="form-inner">
+                <h3>Забронировать автомобиль</h3>
+                <input type="hidden" name="CarId" value="@ViewBag.Id" />
+                <input type="text" name="Person" placeholder="ФИО">
+                <input type="text" name="Adress" placeholder="Адрес">
+                <input type="text" name="Number" placeholder="Номер телефона">
+                <input type="text" name="Id_Model"  placeholder="Номер модели(Важно!)" />
+                <textarea placeholder="Сообщение..." rows="3"></textarea>
+                <input type="submit" value="Отправить заявку">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
